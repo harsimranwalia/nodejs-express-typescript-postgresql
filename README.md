@@ -3,7 +3,6 @@
 [![CI][build-badge]][build-url]
 [![TypeScript][typescript-badge]][typescript-url]
 [![prettier][prettier-badge]][prettier-url]
-![Heisenberg](misc/heisenberg.png)
 
 Boilerplate with focus on best practices and painless developer experience:
 
