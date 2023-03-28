@@ -28,7 +28,7 @@ describe('Users', () => {
 
   beforeEach(async () => {
     await userRepository.save([user]);
-    let res = await request(app).post('/v1/auth/login').send({ email: user.email, password: userPassword });
+    const res = await request(app).post('/v1/auth/login').send({ email: user.email, password: userPassword });
     userToken = res.body.data;
   });
 
@@ -42,7 +42,6 @@ describe('Users', () => {
       expect(res.status).to.equal(200);
       expect(res.body.message).to.equal('List of users.');
     });
-
   });
 
   describe('GET /v1/auth/users//:id([0-9]+)', () => {

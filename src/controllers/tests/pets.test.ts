@@ -52,7 +52,7 @@ describe('Pets', () => {
     });
 
     it('should update pet name', async () => {
-      const res = await request(app).patch(`/v1/pets/${pet.id}`).set('Authorization', token).send({name: 'lucy'});
+      const res = await request(app).patch(`/v1/pets/${pet.id}`).set('Authorization', token).send({ name: 'lucy' });
       expect(res.status).to.equal(200);
       expect(res.body.message).to.equal('Pet successfully saved.');
     });
